@@ -5,7 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
 import android.view.View
-import com.example.arrosit.MainActivity
+import com.example.arrosit.Main.MainActivity
 import com.example.arrosit.Utils.LoadingDialog
 import com.example.arrosit.databinding.ActivityLogInBinding
 import com.google.firebase.auth.FirebaseAuth
@@ -33,6 +33,14 @@ class LogIn : AppCompatActivity() {
 
     }
 
+    override fun onStart() {
+        if (auth.currentUser != null)
+        {
+            finish()
+            startActivity(Intent(this ,MainActivity::class.java))
+        }
+        super.onStart()
+    }
     fun logInWithEmailAndPassword()
     {
         val email = binding.editTextEmail.text.toString().trim()
@@ -61,7 +69,7 @@ class LogIn : AppCompatActivity() {
             if (it.isSuccessful)
             {
                 loadingDialog.hide()
-                startActivity(Intent(this ,MainActivity::class.java))
+                startActivity(Intent(this , MainActivity::class.java))
             }
             else
             {
