@@ -4,6 +4,8 @@ import android.content.res.ColorStateList
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
+import com.example.arrosit.Map.MapFragment
 import com.example.arrosit.R
 import com.example.arrosit.databinding.ActivityMainBinding
 
@@ -15,34 +17,54 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.buttonHome.setOnClickListener {
-            binding.iconHome.setImageResource(R.drawable.ic_home_selected)
+        binding.buttonZones.setOnClickListener {
+            binding.iconZones.setImageResource(R.drawable.ic_zones_selected)
             binding.iconMap.setImageResource(R.drawable.ic_map)
-            binding.iconData.setImageResource(R.drawable.ic_data)
+            binding.iconInsights.setImageResource(R.drawable.ic_insights)
+            binding.iconScan.setImageResource(R.drawable.ic_camera)
             binding.iconProfile.setImageResource(R.drawable.ic_profile)
         }
 
         binding.buttonMap.setOnClickListener {
-            binding.iconHome.setImageResource(R.drawable.ic_home)
+            binding.iconZones.setImageResource(R.drawable.ic_zones)
             binding.iconMap.setImageResource(R.drawable.ic_map_selected)
-            binding.iconData.setImageResource(R.drawable.ic_data)
+            binding.iconInsights.setImageResource(R.drawable.ic_insights)
+            binding.iconScan.setImageResource(R.drawable.ic_camera)
+            binding.iconProfile.setImageResource(R.drawable.ic_profile)
+            setFragment(MapFragment())
+        }
+
+        binding.buttonInsights.setOnClickListener {
+            binding.iconZones.setImageResource(R.drawable.ic_zones)
+            binding.iconMap.setImageResource(R.drawable.ic_map)
+            binding.iconInsights.setImageResource(R.drawable.ic_insights_selected)
+            binding.iconScan.setImageResource(R.drawable.ic_camera)
             binding.iconProfile.setImageResource(R.drawable.ic_profile)
         }
 
-        binding.buttonData.setOnClickListener {
-            binding.iconHome.setImageResource(R.drawable.ic_home)
+        binding.buttonScan.setOnClickListener {
+            binding.iconZones.setImageResource(R.drawable.ic_zones)
             binding.iconMap.setImageResource(R.drawable.ic_map)
-            binding.iconData.setImageResource(R.drawable.ic_data_selected)
+            binding.iconInsights.setImageResource(R.drawable.ic_insights)
+            binding.iconScan.setImageResource(R.drawable.ic_camera_selected)
             binding.iconProfile.setImageResource(R.drawable.ic_profile)
         }
 
         binding.buttonProfile.setOnClickListener {
-            binding.iconHome.setImageResource(R.drawable.ic_home)
+            binding.iconZones.setImageResource(R.drawable.ic_zones)
             binding.iconMap.setImageResource(R.drawable.ic_map)
-            binding.iconData.setImageResource(R.drawable.ic_data)
+            binding.iconInsights.setImageResource(R.drawable.ic_insights)
+            binding.iconScan.setImageResource(R.drawable.ic_camera)
             binding.iconProfile.setImageResource(R.drawable.ic_profile_selected)
+
         }
 
 
+    }
+
+    private fun setFragment(fragment: Fragment) {
+        val fr= supportFragmentManager.beginTransaction()
+        fr.replace(R.id.fragmentContainer ,fragment)
+        fr.commit()
     }
 }
