@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.example.arrosit.Map.MapFragment
+import com.example.arrosit.Profile.ProfileFragment
 import com.example.arrosit.R
 import com.example.arrosit.databinding.ActivityMainBinding
 
@@ -56,6 +57,7 @@ class MainActivity : AppCompatActivity() {
             binding.iconInsights.setImageResource(R.drawable.ic_insights)
             binding.iconScan.setImageResource(R.drawable.ic_camera)
             binding.iconProfile.setImageResource(R.drawable.ic_profile_selected)
+            setFragment(ProfileFragment())
 
         }
 

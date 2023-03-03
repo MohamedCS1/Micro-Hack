@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:textStyle="bold"
             android:text="Map"
-            android:textColor="@color/black"
+            android:textColor="#151223"
             android:textSize="@dimen/_35ssp"
             android:layout_gravity="center|top"/>
 
