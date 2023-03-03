@@ -20,6 +20,7 @@ class LogIn : AppCompatActivity() {
         LoadingDialog(this)
     }
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityLogInBinding.inflate(layoutInflater)
