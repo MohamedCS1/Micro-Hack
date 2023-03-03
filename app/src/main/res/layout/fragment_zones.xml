@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_background"
+    tools:context=".Zones.ZonesFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="Zones"
+            android:textColor="#151223"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:textSize="@dimen/_35ssp"
+            android:layout_gravity="center|top"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/buttonZoneA"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:layout_marginEnd="-10dp"
+                android:src="@drawable/ic_image_zone_a"/>
+
+
+            <ImageView
+                android:id="@+id/buttonZoneB"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:layout_marginStart="-10dp"
+                android:src="@drawable/ic_image_zone_b"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/buttonZoneC"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:layout_marginEnd="-10dp"
+                android:src="@drawable/ic_image_zone_c"/>
+
+
+            <ImageView
+                android:id="@+id/buttonZoneD"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:layout_marginStart="-10dp"
+                android:src="@drawable/ic_image_zone_d"/>
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/buttonZoneE"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:layout_marginEnd="-10dp"
+                android:src="@drawable/ic_image_zone_e"/>
+
+
+            <ImageView
+                android:id="@+id/buttonZoneF"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:layout_marginStart="-10dp"
+                android:src="@drawable/ic_image_zone_f"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+    </ScrollView>

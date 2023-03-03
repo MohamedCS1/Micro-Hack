@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Patterns
 import android.view.View
+import androidx.appcompat.app.AppCompatDelegate
 import com.example.arrosit.Main.MainActivity
 import com.example.arrosit.Utils.LoadingDialog
 import com.example.arrosit.databinding.ActivityLogInBinding
@@ -25,6 +26,8 @@ class LogIn : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityLogInBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
 
         auth = FirebaseAuth.getInstance()
 

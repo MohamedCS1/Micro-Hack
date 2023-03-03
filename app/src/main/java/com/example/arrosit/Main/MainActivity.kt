@@ -5,6 +5,7 @@ import android.content.res.ColorStateList
 import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatDelegate
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
@@ -14,6 +15,7 @@ import com.example.arrosit.Profile.ProfileFragment
 import com.example.arrosit.R
 import com.example.arrosit.Utils.IntentUtils
 import com.example.arrosit.Utils.RequestCodes
+import com.example.arrosit.Zones.ZonesFragment
 import com.example.arrosit.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -23,6 +25,14 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO)
+
+        binding.iconZones.setImageResource(R.drawable.ic_zones_selected)
+        binding.iconMap.setImageResource(R.drawable.ic_map)
+        binding.iconInsights.setImageResource(R.drawable.ic_insights)
+        binding.iconScan.setImageResource(R.drawable.ic_camera)
+        binding.iconProfile.setImageResource(R.drawable.ic_profile)
+        setFragment(ZonesFragment())
 
         binding.buttonZones.setOnClickListener {
             binding.iconZones.setImageResource(R.drawable.ic_zones_selected)
@@ -30,6 +40,7 @@ class MainActivity : AppCompatActivity() {
             binding.iconInsights.setImageResource(R.drawable.ic_insights)
             binding.iconScan.setImageResource(R.drawable.ic_camera)
             binding.iconProfile.setImageResource(R.drawable.ic_profile)
+            setFragment(ZonesFragment())
         }
 
         binding.buttonMap.setOnClickListener {
