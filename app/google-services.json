@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "41621796369",
+    "project_id": "arrosit-4fc39",
+    "storage_bucket": "arrosit-4fc39.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:41621796369:android:b5c51f2fa1026ac28823b0",
+        "android_client_info": {
+          "package_name": "com.example.arrosit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "41621796369-frkf1r3d79q3d5bnroc7fqn3vlchqtlm.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.arrosit",
+            "certificate_hash": "4828ad3ddfb6193b9fb371bf74fe4fd65884f145"
+          }
+        },
+        {
+          "client_id": "41621796369-u0hnhb2uhf25uuobnej0kharo048745e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTY8YnDpE3NMLY_KSu0TD_YYOcAKORMNY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "41621796369-u0hnhb2uhf25uuobnej0kharo048745e.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

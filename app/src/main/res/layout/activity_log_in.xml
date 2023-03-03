@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFBFE"
+    tools:context=".LogIn.LogIn">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center">
+        <ImageView
+            android:layout_width="@dimen/_170sdp"
+            android:layout_height="@dimen/_170sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:src="@drawable/logo"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Log in to continue"
+            android:textSize="@dimen/_15ssp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/_50sdp"/>
+
+        <EditText
+            android:id="@+id/editTextEmail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radius_background"
+            android:hint="Email"
+            android:layout_marginStart="@dimen/_17sdp"
+            android:layout_marginEnd="@dimen/_17sdp"
+            android:padding="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_50sdp"/>
+
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/radius_background"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:layout_marginStart="@dimen/_17sdp"
+            android:layout_marginEnd="@dimen/_17sdp"
+            android:padding="@dimen/_13sdp"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+        <TextView
+            android:id="@+id/textViewError"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#d05762"
+            android:text="Incorrect password"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:visibility="invisible"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_gravity="center"/>
+
+
+        <TextView
+            android:id="@+id/buttonLogIn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_15ssp"
+            android:text="Log in"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:background="@drawable/radius_background"
+            android:backgroundTint="#2367FF"
+            android:paddingStart="@dimen/_80sdp"
+            android:paddingEnd="@dimen/_80sdp"
+            android:paddingTop="@dimen/_13sdp"
+            android:paddingBottom="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_15sdp"
+            android:layout_marginTop="@dimen/_50sdp"/>
+
+    </LinearLayout>
+</ScrollView>
