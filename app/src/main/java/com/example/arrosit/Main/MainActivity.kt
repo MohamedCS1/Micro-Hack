@@ -10,6 +10,7 @@ import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.arrosit.Camera.CameraFragment
+import com.example.arrosit.Insights.InsightFragment
 import com.example.arrosit.Map.MapFragment
 import com.example.arrosit.Profile.ProfileFragment
 import com.example.arrosit.R
@@ -58,11 +59,11 @@ class MainActivity : AppCompatActivity() {
             binding.iconInsights.setImageResource(R.drawable.ic_insights_selected)
             binding.iconScan.setImageResource(R.drawable.ic_camera)
             binding.iconProfile.setImageResource(R.drawable.ic_profile)
+            setFragment(InsightFragment())
         }
 
         binding.buttonScan.setOnClickListener {
             checkCameraPermission()
-
         }
 
         binding.buttonProfile.setOnClickListener {
@@ -72,9 +73,7 @@ class MainActivity : AppCompatActivity() {
             binding.iconScan.setImageResource(R.drawable.ic_camera)
             binding.iconProfile.setImageResource(R.drawable.ic_profile_selected)
             setFragment(ProfileFragment())
-
         }
-
 
     }
 
